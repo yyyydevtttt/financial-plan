@@ -1,0 +1,7 @@
+input[type=text] {
+    width: 90px;
+}
+select {
+    width: 42px;
+    -webkit-appearance: none;
+}

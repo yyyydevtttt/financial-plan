@@ -1,9 +1,15 @@
-<p>
-  家族構成
-</p>
-<p>
-ご家族の構成は？
-</p>
-
-<input type="text" [(ngModel)]="name">
-
+<div class="header">
+  <h2>家族構成</h2>
+  <aside>ご家族の構成は？</aside>
+</div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input class="default-input" type="text" [(ngModel)]="name" placeholder="name">
+  <select class="default-input" [(ngModel)]="selectedValue">
+    <option value="husband">夫</option>
+    <option value="wife">妻</option>
+    <option value="child">子</option>
+    <option value="parent">親</option>
+  </select>
+  <input class="default-input" type="date" [(ngModel)]="birthday">
+  <button class="default-input" type="submit" [disabled]="!f.form.valid">登録</button>
+</form>
