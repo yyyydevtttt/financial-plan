@@ -1,0 +1,160 @@
+.expense-container {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid #7b8994;
+  border-bottom: none;
+  border-right: none;
+}
+
+.expense-header {
+  display: flex;
+  height: 30px;
+  font-weight: bold;
+  background:  #7dadd2;
+  /*align-items: center;
+  justify-content: center;*/
+}
+
+.expense-row {
+  display: flex;
+  height: 50px;
+  /*border-bottom: 1px solid #7b8994;*/
+  /*padding: 5px;*/
+}
+
+/*.expense-column {
+  display: flex;
+  border-right: 1px solid #7b8994;
+}*/
+
+.expense-item {
+  width: 15%;
+  border-bottom: 1px solid #7b8994;
+  border-right: 1px solid #7b8994;
+}
+
+.expense-content {
+  width: 25%;
+  border-bottom: 1px solid #7b8994;
+  border-right: 1px solid #7b8994;
+}
+
+.expense-monthly {
+  width: 20%;
+  border-bottom: 1px solid #7b8994;
+  border-right: 1px solid #7b8994;
+}
+
+.expense-suddenly {
+  width: 20%;
+  border-bottom: 1px solid #7b8994;
+  border-right: 1px solid #7b8994;
+}
+
+.expense-yearly {
+  width: 20%;
+  border-bottom: 1px solid #7b8994;
+  border-right: 1px solid #7b8994;
+}
+
+.header-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.item-cell {
+  display: inline-flex;
+  background: #bbd0e0;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.content-cell {
+  display: inline-flex;
+  background: #bbd0e0;
+  font-size: 0.8rem;
+  align-items: center;
+  padding: 5px;
+}
+
+.input-cell {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.input-cell > input {
+  width: 100%;
+  min-width: 4em;
+  text-align: right;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.view-cell {
+  display: inline-flex;
+  background: beige;
+  font-size: 1.3rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.unit {
+  font-size: 0.7rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.total-expense {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px;
+}
+
+.title {
+  display: flex;
+  width: 200px;
+  height: 45px;
+  font-weight: bold;
+  background: transparent;
+  border: 3px solid transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.total {
+  display: inline-flex;
+  width: 125px;
+  height: 45px;
+  font-weight: bold;
+  background: beige;
+  border: 3px solid #EB8F33;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.3rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+div.radius-orange {
+  display: flex;
+  height: 26px;
+  width: 26px;
+  font-weight: bold;
+  background: #EB8F33;
+  border-radius: 13px;
+  margin-left: 5px;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+}

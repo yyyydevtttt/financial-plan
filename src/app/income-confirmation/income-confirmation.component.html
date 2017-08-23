@@ -1,12 +1,34 @@
-<p>
-年間の収入と支出を書き出そう</p>
-<p>
-年間収入から年間支出を差し引いてみると、家計が赤字か黒字かわかります
-</p>
+<div class="header">
+  <h2>年間の収入と支出を書き出そう</h2>
+  <aside>年間収入から年間支出を差し引いてみると、家計が赤字か黒字かわかります</aside>
+</div>
+<app-income></app-income>
+<app-expense></app-expense>
+<hr>
+<div class="saving">
+  <div class="title">1年間に貯蓄できる額<div class="radius-white">A</div>-<div class="radius-white">B</div></div>
+  <div class="total">
+    <span>{{calcSaving()}}</span>
+    <span class="unit">万円</span>
+  </div>
+</div>
 
-<h3>年間の収入</h3>
 
+<!--
+<div class="saving">
+  <div class="title">1年間に貯蓄できる額<div class="radius-white">A</div>-<div class="radius-white">B</div></div>
+  <div class="total">
+    <span>{{calcSaving()}}</span>
+    <span class="unit">万円</span>
+  </div>
+</div>
 
-<h3>年間の支出</h3>
+<div >
+  <div >1年間に貯蓄できる額<div >A</div>-<div >B</div></div>
+  <div >
+    <span>{{calcSaving()}}</span>
+    <span >万円</span>
+  </div>
+</div>
 
-
+    -->

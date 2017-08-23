@@ -3,4 +3,35 @@ div {
     border-left: solid 5px #454B90;
     padding: 0 0 0 10px;
 }
-
+.active-link {
+    background: #EB8F33;
+    color: #FFFFFF;
+}
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid #EB8F33
+}
+li {
+    list-style: none;
+    width: 180px;
+    border-right: 5px solid #FFFFFF;
+    background: #F2F2F2;
+}
+a {
+    display: block;
+    padding: 10px 15px;
+    height: 50px;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    color: #2E2E2E;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Human } from "app/shared/services/family/human";
+import { FamilyService } from "app/shared/services/family/family.service";
 
 @Component({
   selector: 'app-family',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FamilyComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
+
 
 }

@@ -1,0 +1,113 @@
+<h3>年間の支出</h3>
+<div class="expense-container">
+  <div class="expense-header">
+    <div class="expense-item header-cell"><span>支出項目</span></div>
+    <div class="expense-content header-cell"><span>内容</span></div>
+    <div class="expense-monthly header-cell"><span>毎月 ①</span></div>
+    <div class="expense-suddenly header-cell"><span>年に数回 ②</span></div>
+    <div class="expense-yearly header-cell"><span>年間 ①×12+②</span></div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>基本生活費</span></div>
+    <div class="expense-content content-cell"><span>食費、水道光熱費、通信費、日用雑貨費など</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="base.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="base.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{base.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>住居関連費</span></div>
+    <div class="expense-content content-cell"><span>住宅ローン、管理費、積立金、固定資産税など</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="residence.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="residence.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{residence.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>車両費</span></div>
+    <div class="expense-content content-cell"><span>駐車場代、ガソリン代、自動車税など</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="vehicle.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="vehicle.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{vehicle.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>教育費</span></div>
+    <div class="expense-content content-cell"><span>学校教育費、塾代、習い事の費用など</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="education.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="education.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{education.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>保険料</span></div>
+    <div class="expense-content content-cell"><span>家族全員の保険料</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="insurance.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="insurance.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{insurance.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+  <div class="expense-row">
+    <div class="expense-item item-cell"><span>その他の支出</span></div>
+    <div class="expense-content content-cell"><span>レジャー費、交際費、冠婚葬祭費など</span></div>
+    <div class="expense-monthly input-cell">
+      <input type="number" [(ngModel)]="another.monthly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-suddenly input-cell">
+      <input type="number" [(ngModel)]="another.suddenly" min="0">
+      <span class="unit">万円</span>
+    </div>
+    <div class="expense-yearly view-cell">
+      <span>{{another.yearly}}</span>
+      <span class="unit">万円</span>
+    </div>
+  </div>
+</div>
+<div class="total-expense">
+  <div class="title"><div class="radius-orange">B</div>年間支出合計</div>
+  <div class="total">
+    <span>{{calcTotalExpenses()}}</span>
+    <span class="unit">万円</span>
+  </div>
+</div>

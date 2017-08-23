@@ -4,11 +4,13 @@
 -->
 
 <nav>
-  <a routerLink="family">家族情報</a>
-  <a routerLink="income-confirmation">家計の収支確認表</a>
-  <a routerLink="balance-sheet">家計のバランスシート</a>
-  <a routerLink="life-event">ライフイベント表</a>
-  <a routerLink="cash-flow">キャッシュフロー表</a>
+  <ul>
+    <li><a routerLink="family" routerLinkActive="active-link">家族情報</a></li>
+    <li><a routerLink="income-confirmation" routerLinkActive="active-link">家計の収支確認表</a></li>
+    <li><a routerLink="balance-sheet" routerLinkActive="active-link">家計のバランスシート</a></li>
+    <li><a routerLink="life-event" routerLinkActive="active-link">ライフイベント表</a></li>
+    <li><a routerLink="cash-flow" routerLinkActive="active-link">キャッシュフロー表</a></li>
+  </ul>
 </nav>
 
 <router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+<div [hidden]="myVar" (click)="onClick()">
+  <span class="name">{{name}}</span>
+  <span class="relationship" >{{relationship | relationship_value}}</span>
+  <span class="birthday">{{birthday | date:'yMd'}}</span>
+</div>
+<app-family-update [hidden]="!myVar"
+  [rownum]="rownum"
+  [name]="name"
+  [relationship]="relationship"
+  [birthday]="birthday">
+</app-family-update>

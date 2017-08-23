@@ -1,0 +1,8 @@
+<div *ngFor="let human of family; let i = index">
+  <app-family-detail
+    [rownum]="i"
+    [name]="human.name"
+    [relationship]="human.relationship"
+    [birthday]="human.birthday">
+  </app-family-detail>
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IncomeComponent } from "app/income-confirmation/income/income.component";
+import { ExpenseComponent } from "app/income-confirmation/expense/expense.component";
 
 @Component({
   selector: 'app-income-confirmation',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncomeConfirmationComponent implements OnInit {
 
+  @ViewChild(IncomeComponent)
+  incomeComponent: IncomeComponent;
+
+  @ViewChild(ExpenseComponent)
+  expenseComponent: ExpenseComponent;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  calcSaving(): number {
+    return this.incomeComponent.calcTotalAfterTaxIncome() - this.expenseComponent.calcTotalExpenses();
+  }
 }

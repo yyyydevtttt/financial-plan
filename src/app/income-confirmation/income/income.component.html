@@ -1,0 +1,83 @@
+<h3>年間の収入</h3>
+<div class="income-container">
+  <div class="income">
+    <div class="income-input">
+      <div class="table-header">
+        収入金額
+      </div>
+      <div class="income-couple">
+        <div class="couple">夫</div>
+        <div class="money−input">
+          <input type="number" [(ngModel)]="husband.income" min="0" step="10">
+          <span class="unit">万円</span>
+        </div>
+      </div>
+      <div class="income-couple">
+        <div class="couple">妻</div>
+        <div class="money−input">
+          <input type="number" [(ngModel)]="wife.income" min="0" step="10">
+          <span class="unit">万円</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sign">-</div>
+  <div class="tax">
+    <div class="tax-input">
+      <div class="table-header">所得税</div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="husband.incomeTax" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="wife.incomeTax" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+    <div class="sign">+</div>
+    <div class="tax-input">
+      <div class="table-header">社会保険料</div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="husband.insurancePremium" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="wife.insurancePremium" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+    <div class="sign">+</div>
+    <div class="tax-input">
+      <div class="table-header">住民税</div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="husband.residentTax" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+      <div class="money−input">
+        <input type="number" [(ngModel)]="wife.residentTax" min="0" step="10">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+  </div>
+  <div class="sign">=</div>
+  <div class="after-tax-income">
+    <div class="after-tax-income-total">
+      <div class="table-header">年間の手取り収入</div>
+      <div class="money-view">
+        <span>{{husband.afterTaxIncome}}</span>
+        <span class="unit">万円</span>
+      </div>
+      <div class="money-view">
+        <span>{{wife.afterTaxIncome}}</span>
+        <span class="unit">万円</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="total-income">
+  <div class="title"><div class="radius-orange">A</div>年間収入合計</div>
+  <div class="total">
+    <span>{{calcTotalAfterTaxIncome()}}</span>
+    <span class="unit">万円</span>
+  </div>
+</div>

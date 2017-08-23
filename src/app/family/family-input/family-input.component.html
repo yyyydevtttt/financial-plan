@@ -1,0 +1,10 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input class="name" type="text" name="name" ngModel required placeholder="name">
+  <select class="relationship" name="relationship" ngModel required placeholder="relationship">
+    <option *ngFor="let relationship of relationships" value="{{relationship.key}}">
+      {{relationship.value}}
+    </option>
+  </select>
+  <input class="birthday" type="date" name="birthday" ngModel required placeholder="birthday">
+  <button type="submit" [disabled]="!f.form.valid">登録</button>
+</form>

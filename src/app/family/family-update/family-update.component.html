@@ -1,0 +1,11 @@
+<form class="inlines" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input class="name" type="text" name="name" [(ngModel)]=name required placeholder="name">
+  <select class="relationship" name="relationship" [(ngModel)]=relationship required placeholder="relationship">
+    <option *ngFor="let relationship of relationships" value="{{relationship.key}}">
+      {{relationship.value}}
+    </option>
+  </select>
+  <input class="birthday" type="date" name="birthday" [(ngModel)]=birthdayFormat required placeholder="birthday">
+  <button type="submit" [disabled]="!f.form.valid">更新</button>
+</form>
+<button class="inlines" (click)="delete()">削除</button>
