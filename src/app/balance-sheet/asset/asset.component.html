@@ -1,0 +1,22 @@
+<div class="asset">
+  <div class="box">
+    <div class="heading">資産</div>
+    <div *ngFor="let asset of assets" class="row">
+      <div class="title">
+        {{asset.title}}
+      </div>
+      <div>
+        <input [(ngModel)]="asset.money" type="number" (click)="$event.target.select()" min="0" class="money">
+        <span class="monetaryUnit">{{asset.monetaryUnit}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-box">
+    <p class="footer-symbol">A</p>
+    <span class="footer-caption">資産合計</span>
+    <div class="footer-total-box">
+      <span class="footer-total-money">{{ calcAssetTotal() | number}}</span>
+      <span class="footer-total-monetaryUnit">万円</span>
+    </div>
+  </div>
+</div>

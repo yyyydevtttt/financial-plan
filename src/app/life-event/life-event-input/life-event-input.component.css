@@ -1,0 +1,20 @@
+input, select, button {
+    font-size: 14px;
+    border: solid 1px #EEEEEE;
+    padding: 10px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+}
+.name {
+    width: 150px;
+    height: 20px;
+}
+.relationship {
+    width: 60px;
+    height: 40px;    
+}
+.birthday {
+    width: 150px;
+    height: 20px;    
+}
+

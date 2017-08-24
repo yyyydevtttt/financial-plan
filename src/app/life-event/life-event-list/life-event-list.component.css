@@ -1,0 +1,31 @@
+span {
+    font-size: 14px;
+    display: inline-block;
+    border: solid 1px #FFFFFF;
+    border-bottom: solid 1px #EEEEEE;
+    padding: 10px;
+    margin: 1px;
+}
+button {
+    font-size: 14px;
+    border: solid 1px #EEEEEE;
+    padding: 10px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+}
+.name {
+    width: 150px;
+    height: 20px;
+}
+.relationship {
+    width: 60px;
+    height: 40px;    
+}
+.birthday {
+    width: 150px;
+    height: 20px;    
+}
+ul{
+    list-style: none;
+    padding: 0;
+}

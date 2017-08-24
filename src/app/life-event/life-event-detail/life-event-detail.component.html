@@ -1,0 +1,12 @@
+<div>
+  <span class="name">{{event.year}}</span>
+  <span *ngFor="let person of family">{{calcAge(event.year, person)}}</span>
+  <span class="name">{{event.event}}</span>
+  <span class="name">{{event.money}}</span>
+</div>
+
+
+<!--
+<div [hidden]="myVar" (click)="onClick()">
+  
+  -->

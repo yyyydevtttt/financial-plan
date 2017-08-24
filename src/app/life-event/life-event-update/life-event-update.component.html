@@ -1,0 +1,12 @@
+<form class="inlines" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <select class="relationship" name="familyPerson" ngModel required>
+    <option *ngFor="let person of family" [ngValue]="person">
+      {{person.name}}
+    </option>
+  </select>
+  <input class="name" name="year" [(ngModel)]="event.year" type="number" required (click)="$event.target.select()" min="0" >
+  <input class="name" name="event" [(ngModel)]="event.event" type="text" required>
+  <input class="name" name="money" [(ngModel)]="event.money" type="number" required (click)="$event.target.select()" min="0" >
+  <button type="submit" [disabled]="!f.form.valid">更新</button>
+</form>
+<button class="inlines" (click)="delete()">削除</button>

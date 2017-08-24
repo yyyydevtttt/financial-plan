@@ -1,0 +1,85 @@
+.box {
+  width: 22rem;
+  border: solid 1px #8E969B;
+}
+.heading {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 0;
+  background-color: #7DADD2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  border-top: solid 1px #8E969B;
+  height: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.title {
+  font-size: 14px;
+  border-right: solid 1px #8E969B;
+  padding-left: 10px;
+  border-radius: 0;
+  background-color: #BBD0E0;
+  width: 10rem
+}
+
+.money {
+  text-align: right;
+  border: none;
+  width: 7rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.footer-box {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.footer-symbol {
+  background-color: #EB9967;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.footer-caption {
+  font-size: 19px;
+}
+
+.footer-total-box {
+  height: 3.5rem;
+  width: 11rem;
+  background-color: #FFF4D2;
+  border: solid 3px #EA9562;
+  margin-left: 25px;
+  position: relative;
+  font-weight: bold;
+}
+.footer-total-money {
+  bottom: 1rem;
+  position: absolute;
+  right: 50px;
+}
+.footer-total-monetaryUnit {
+  position: absolute;
+  bottom: 0px;
+  right: 3px;
+}

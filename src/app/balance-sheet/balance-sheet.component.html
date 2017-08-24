@@ -1,3 +1,18 @@
-<p>
-  balance-sheet works!
-</p>
+<div class="header">
+  <h2>家計のバランスシートを作ってみよう</h2>
+  <aside>バランスシートとはある時点での資産と負債の状況を示したものです。資産と負債の差額が、本当の意味での資産といえる「純資産」となります。この「純資産」を確認するためにも、この機会に資産と負債を洗い出してみましょう。</aside>
+</div>
+
+<div class="app-box">
+  <app-asset></app-asset>
+  <app-liability></app-liability>
+</div>
+<hr>
+<div class="stockholders-equity-box">
+
+  資産合計 <p>A</p> - 負債合計 <p>B</p> = 純資産
+  <div class="stockholders-equity-money-box">
+    <span class="stockholders-equity-money">{{ calcStockholdersEquity() | number}}</span>
+    <span class="stockholders-equity-monetaryUnit">万円</span>
+  </div>
+</div>
