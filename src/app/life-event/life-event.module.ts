@@ -10,7 +10,6 @@ import { LifeEventUpdateComponent } from './life-event-update/life-event-update.
 import { FamilyAlertComponent } from './family-alert/family-alert.component';
 import { FormsModule } from "@angular/forms";
 import { SharedModule } from "app/shared/shared.module";
-import { LifeEventService } from "app/shared/services/life-event/life-event.service";
 
 @NgModule({
   imports: [
@@ -19,7 +18,6 @@ import { LifeEventService } from "app/shared/services/life-event/life-event.serv
     SharedModule,
     LifeEventRoutingModule
   ],
-  providers: [LifeEventService],
   declarations: [LifeEventComponent, LifeEventDetailComponent, LifeEventInputComponent, LifeEventListComponent, LifeEventUpdateComponent, FamilyAlertComponent]
 })
 export class LifeEventModule { }

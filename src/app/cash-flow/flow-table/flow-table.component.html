@@ -1,0 +1,130 @@
+<div class="table">
+  <div class="row"> <!-- 年 -->
+    <div class="column_header">
+      年
+    </div>
+    <div class="column date" *ngFor="let year of years">
+      {{year}}年
+    </div>
+  </div>
+  <div class="row"> <!-- 経過年数 -->
+    <div class="column_header">
+      経過年数
+    </div>
+    <div class="column date" *ngFor="let year of years" >
+      {{year - baseYear}}年
+    </div>
+  </div>
+  <div class="row" *ngFor="let person of family"> <!-- 年齢の変化 -->
+    <div class="column_header">
+      {{person.relationship | relationship_value}}の年齢({{person.name}})
+    </div>
+    <div class="column date" *ngFor="let year of years" >
+      {{year - bithdayYear(person)}}歳
+    </div>
+  </div>
+  <div class="row"> <!-- 夫の収入 -->
+    <div class="column_header">
+      夫の収入
+    </div>
+    <div class="column" >
+      {{getHusbundIncome()}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 妻の収入 -->
+    <div class="column_header">
+      妻の収入
+    </div>
+    <div class="column" >
+      {{getWifeIncome()}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 収入の合計 -->
+    <div class="column_header sum_header">
+      収入合計<span class="circle">A</span>
+    </div>
+    <div class="column" >
+      {{calcTotalAfterTaxIncome()}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 基本生活費 -->
+    <div class="column_header">
+      基本生活費
+    </div>
+    <div class="column" >
+      {{expenseService.base.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 住居関連費 -->
+    <div class="column_header">
+      住居関連費
+    </div>
+    <div class="column" >
+      {{expenseService.residence.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 車両費 -->
+    <div class="column_header">
+      車両費
+    </div>
+    <div class="column" >
+      {{expenseService.vehicle.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 教育費 -->
+    <div class="column_header">
+      教育費
+    </div>
+    <div class="column" >
+      {{expenseService.education.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 保険料 -->
+    <div class="column_header">
+      保険料
+    </div>
+    <div class="column" >
+      {{expenseService.insurance.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- その他支出 -->
+    <div class="column_header">
+      その他支出
+    </div>
+    <div class="column" >
+      {{expenseService.another.yearly}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 一時的支出 -->
+    <div class="column_header">
+      一時的支出
+    </div>
+    <div class="column date" *ngFor="let year of years">
+      {{getEventExpense(year)}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 支出合計B-->
+    <div class="column_header sum_header">
+      支出合計<span class="circle">B</span>
+    </div>
+    <div class="column date" *ngFor="let year of years">
+      {{getTotalExpenses() + getEventExpense(year)}}万円
+    </div>
+  </div>
+  <div class="row"> <!-- 年間支出A-B-->
+    <div class="column_header sum_header">
+      年間支出<span class="circle">A</span> - <span class="circle">B</span>
+    </div>
+    <div class="column date" *ngFor="let year of years">
+      {{calcTotalAfterTaxIncome() - getTotalExpenses() - getEventExpense(year)}}万円
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <button (click)="jumpInitialPage()" [class.navDisabled]="pageNo === 0"> << </button>
+  <button (click)="backPage()" [class.navDisabled]="pageNo === 0"> < </button>
+  <span>{{pageNo + 1}} / {{PAGE_NO_MAX}}</span>
+  <button (click)="nextPage()" [class.navDisabled]="pageNo === (PAGE_NO_MAX - 1)"> > </button>
+  <button (click)="jumpLastPage()" [class.navDisabled]="pageNo === (PAGE_NO_MAX - 1)"> >> </button>
+</nav>

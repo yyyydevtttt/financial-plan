@@ -5,19 +5,23 @@ input, select, button {
     border-radius: 0;
     background-color: #FFFFFF;
 }
-.name {
-    width: 150px;
-    height: 20px;
-}
-.relationship {
-    width: 60px;
-    height: 40px;    
-}
-.birthday {
-    width: 150px;
-    height: 20px;    
-}
 .inlines {
     display: inline;
+}
+.year {
+    width: 60px;
+    height: 20px;        
+}
+.age {
+    width: 60px;
+    height: 20px;        
+}
+.event {
+    width: 200px;
+    height: 20px;    
+}
+.money {
+    width: 80px;
+    height: 20px;        
 }
 

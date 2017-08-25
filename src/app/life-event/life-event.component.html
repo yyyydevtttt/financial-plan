@@ -1,7 +1,7 @@
-<div class="header">
-  <h2>今後のライフイベントとかかる費用</h2>
-  <aside>今から20年先までの自分と家族の暮らしをイメージしながら、先々のライフイベントとかかる費用を書き出してみましょう</aside>
-</div>
+<app-page-header
+  [title]="'今後のライフイベントとかかる費用'"
+  [desc]="'今から20年先までの自分と家族の暮らしをイメージしながら、先々のライフイベントとかかる費用を書き出してみましょう'">
+</app-page-header>
 <app-family-alert *ngIf="isFamilyEmpty()"></app-family-alert>
 <app-life-event-input *ngIf="!isFamilyEmpty()" [family]="family"></app-life-event-input>
 <app-life-event-list *ngIf="!isFamilyEmpty()" [family]="family" [lifeEvents]="lifeEvent"></app-life-event-list>

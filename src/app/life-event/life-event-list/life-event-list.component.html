@@ -1,7 +1,7 @@
-<span class="name">年</span>
-<span class="name" *ngFor="let person of family">{{person.relationship | relationship_value}}の年齢</span>
-<span class="name">ライフイベント</span>
-<span class="name">かかるお金</span>
+<span class="year">年次</span>
+<span class="age" *ngFor="let person of family">{{person.relationship | relationship_value}}の年齢</span>
+<span class="event">ライフイベント</span>
+<span class="money">かかるお金</span>
 <ul>
   <li *ngFor="let lifeEvent of lifeEvents; let i = index">
     <app-life-event-detail

@@ -1,11 +1,11 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <select class="relationship" name="familyPerson" ngModel required placeholder="person">
+  <select name="familyPerson" ngModel required placeholder="person">
     <option *ngFor="let person of family" [ngValue]="person">
-      {{person.relationship | relationship_value}}
+      {{person.name}}さん({{person.relationship | relationship_value}})
     </option>
   </select>
-  <input class="name" name="year" type="number"  ngModel required placeholder="year" (click)="$event.target.select()" min="0" >
-  <input class="name" name="event" type="text" ngModel required placeholder="event">
-  <input class="name" name="money" type="number"  ngModel required placeholder="money" (click)="$event.target.select()" min="0" >
+  <input class="year" name="year" type="number" ngModel required placeholder="年次" (click)="$event.target.select()" min="0" >
+  <input class="event" name="event" type="text" ngModel required placeholder="イベント">
+  <input class="money" name="money" type="number"  ngModel required placeholder="金額" (click)="$event.target.select()" min="0" >
   <button type="submit" [disabled]="!f.form.valid">登録</button>
 </form>

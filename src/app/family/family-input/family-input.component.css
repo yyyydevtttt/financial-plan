@@ -17,4 +17,7 @@ input, select, button {
     width: 150px;
     height: 20px;    
 }
-
+.invalid-input {
+  color: #ff0000;
+  border-color: #ff0000;
+}

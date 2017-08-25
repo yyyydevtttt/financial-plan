@@ -5,16 +5,20 @@ input, select, button {
     border-radius: 0;
     background-color: #FFFFFF;
 }
-.name {
-    width: 150px;
-    height: 20px;
-}
-.relationship {
+.year {
     width: 60px;
-    height: 40px;    
+    height: 20px;        
 }
-.birthday {
-    width: 150px;
+.age {
+    width: 60px;
+    height: 20px;        
+}
+.event {
+    width: 200px;
     height: 20px;    
+}
+.money {
+    width: 80px;
+    height: 20px;        
 }
 

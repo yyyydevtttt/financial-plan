@@ -29,3 +29,19 @@ ul{
     list-style: none;
     padding: 0;
 }
+.year {
+    width: 60px;
+    height: 20px;        
+}
+.age {
+    width: 60px;
+    height: 20px;        
+}
+.event {
+    width: 200px;
+    height: 20px;    
+}
+.money {
+    width: 80px;
+    height: 20px;        
+}

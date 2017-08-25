@@ -1,10 +1,17 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input class="name" type="text" name="name" ngModel required placeholder="name">
-  <select class="relationship" name="relationship" ngModel required placeholder="relationship">
+  <input class="name" type="text" name="name" ngModel required placeholder="お名前">
+  <select class="relationship" name="relationshipList" ngModel required placeholder="relationship">
     <option *ngFor="let relationship of relationships" value="{{relationship.key}}">
       {{relationship.value}}
     </option>
   </select>
   <input class="birthday" type="date" name="birthday" ngModel required placeholder="birthday">
-  <button type="submit" [disabled]="!f.form.valid">登録</button>
+  <button type="submit" [disabled]="!f.form.valid || check(f)" >登録</button>
+  <span class="invalid-input" [hidden]="!check(f)">「夫」「妻」は１人のみ登録できます</span>
 </form>
+
+<!--
+
+  <span *ngIf="check(relationship)">「夫」「妻」は１人のみ登録できます</span>
+
+  -->

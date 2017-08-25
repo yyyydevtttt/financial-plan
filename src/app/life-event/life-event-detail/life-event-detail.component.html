@@ -1,8 +1,8 @@
 <div>
-  <span class="name">{{event.year}}</span>
-  <span *ngFor="let person of family">{{calcAge(event.year, person)}}</span>
-  <span class="name">{{event.event}}</span>
-  <span class="name">{{event.money}}</span>
+  <span class="year">{{event.year}}年</span>
+  <span class="age" *ngFor="let person of family">{{calcAge(event.year, person)}}歳</span>
+  <span class="event">{{event.event}}</span>
+  <span class="money">{{event.money}}万円</span>
 </div>
 
 
